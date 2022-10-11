@@ -57,10 +57,16 @@ document.addEventListener( "DOMContentLoaded", () =>{
 })
 
 
-//MENÚ AMBURGUESA
-
+//SLIDER MENU
 const menuBtn = document.getElementById("menu-btn")
-const menu = document.querySelector(".nav-menu")
-menuBtn.addEventListener("click", () => {
-  menu.classList.toggle("visibility")
+const menuSlider = document.getElementById("menu-slider")
+const closeMenu = document.getElementById("close-menu")
+
+menuBtn.addEventListener("click", e => {
+  menuSlider.classList.add("open-menu")
 })
+
+closeMenu.addEventListener("click", e => {
+  menuSlider.classList.remove("open-menu")
+})
+

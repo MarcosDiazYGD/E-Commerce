@@ -132,28 +132,46 @@ body.dark-theme {
 
 /*ERROR: LA PARTE SUPERIOR CONSERVA EL FONDO
 NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
-.nav-menu{
-  background-color: white;
-    width: 100%;
-    height: calc(100vh - 60px);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    display: none;
+
+/* SOLUCIONADO CON: position: fixed; top: 0%; right: -100%; (-100% permanece oculto) */
+.navbar--menu-slider {
+  position: fixed;
+  top: 0%;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-color);
+  padding: .5rem 1rem;
+  transition: .3s;
 }
 
-.nav-menu.visibility{
+.buttons-slider {
+  height: 5%;
+  width: 100%;
   display: flex;
+  justify-content: end;
+  align-items: center;
+  gap:1rem;
+}
+
+.content-slider {
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  list-style: none;
+  gap: 1rem;
+  width: 100%;
+  height: 95%;
 }
 
-.home-text{
-  padding-bottom: 1rem;
-  color: var(--first-color);
+.content-slider a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* CLASE PARA APARECER EL MENU */
+.open-menu{
+  right: 0%;
 }
 
 /* ========== FEATURE PRODUCT ========== */
@@ -217,7 +235,7 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
   background-color: var(--button-color);
   color: var(--container-color);
   padding: 1rem;
-  margin-left: -.5rem;
+  margin-left: -.2rem;
 }
 
 /* ========= SHOW PRODUCTS ========== */
