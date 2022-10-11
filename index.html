@@ -1,92 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Academlo Store</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Academlo Store</title>
 </head>
+
 <body>
 
-    <!--========== Logo Academlo con contorno ==========-->
-    <!-- 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
-        <title>Academlo Logo</title>
-        <g>
-            <g>
-                <path
-                d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
-                </path>
-                <path
-                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
-                </path>
-            </g>
-        </g>
-    </svg>
-    -->
+	<!--========== Logo Academlo con contorno ==========-->
+	<div id="loader" class="loader">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="loader-img">
+			<title>Academlo Logo</title>
+			<g>
+				<g>
+					<path
+						d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+					</path>
+					<path
+						d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+					</path>
+				</g>
+			</g>
+		</svg>
 
-    <!--=========== Logo Academlo sin contorno ==========-->
-    <!--
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
-        <title>Academlo Logo</title>
-        <g>
-          <g>
-            <path
-              d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
-            </path>
-          </g>
-        </g>
-    </svg>
-    -->
-    <header>
+		<!--=========== Logo Academlo sin contorno ==========-->
+		<!--
 
-<!-- NAVBAR -->
-    <nav class="navbar">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+			<title>Academlo Logo</title>
+			<g>
+				<g>
+					<path
+						d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+					</path>
+				</g>
+			</g>
+		</svg>
+		-->
+	</div>
+	<header>
+		<title></title>
+		<!-- NAVBAR -->
+		<nav class="navbar">
 
-<!-- ACADEMLO LOGO -->
-      <div class="container-logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="academlo-logo"
-        <title>Academlo Logo</title>
-          <g>
-            <g>
-              <path
-              d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
-              </path>
-            </g>
-          </g>
-        </svg>
-        <h2>STORE</h2>
-      </div>
+			<!-- ACADEMLO LOGO -->
+			<div class="container-logo">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="academlo-logo">
+					<title>Academlo Logo</title>
+					<g>
+						<g>
+							<path
+								d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+							</path>
+						</g>
+					</g>
+				</svg>
+				<h2>STORE</h2>
+			</div>
 
-<!-- icons: moon - bag - menu -->
-      <div class="navbar-icons">
-        <i class='bx bx-moon'></i>
-        <i class='bx bx-shopping-bag' ></i>
-        <i class='bx bx-grid-alt'></i>
-      </div>
-    </nav>
-    
-<!-- FEATURE PRODUCT -->
-    <div class="feature--product">
-      <div class="container--img-product">
-        <img src="assets/images/featured2.png" alt="producto destacado" class="img-product">
-      </div>
-      <div class="feature--product__text">
-        <h1>New Sweatshirt <br>COLLECTIONS 2022</h1>
-        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum aut alias incidunt excepturi eos corrupti!</P>
-        
-        <span class="feature--product__price">$14.00</span>
+			<!-- icons: moon - bag - menu -->
+			<div class="navbar-icons">
+				<i class='bx bx-moon' id="theme-btn"></i>
+				<i class='bx bx-shopping-bag'></i>
+				<i class='bx bx-grid-alt' id="menu-btn"></i>
+				<ul class="nav-menu">
+					<li class="home-text">HOME</li>
+					<li>PRODUCTS</li>
+				</ul>
+			</div>
+		</nav>
 
-        <div class="feature--product-buttons">
-          <button class="button--discover">Discover</button>
-          <button class="button--add-to-cart">ADD TO CART</button>
-        </div>
-        
-      </div>
-    </div>
-  </header>
-    <script src="assets/js/main.js"></script>
+		<!-- FEATURE PRODUCT -->
+		<div class="feature--product">
+			<div class="container--img-product">
+				<img src="assets/images/featured2.png" alt="producto destacado" class="img-product">
+			</div>
+			<div class="feature--product__text">
+				<h1>New Sweatshirt <br>COLLECTIONS 2022</h1>
+				<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum aut alias incidunt excepturi eos corrupti!
+				</P>
+
+				<span class="feature--product__price">$14.00</span>
+
+				<div class="feature--product-buttons">
+					<button class="button--discover">Discover</button>
+					<button class="button--add-to-cart">ADD TO CART</button>
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- SHOW PRODUCTS -->
+		<div class="all-product">
+			<div class="stocks-products">
+				<div class="product-text uno bord">
+					<h5>Show All</h5>
+					<h6>Show all products</h6>
+				</div>
+				<div class="product-text dos bord">
+					<h5>Hoodies</h5>
+					<h6>3 products</h6>
+				</div>
+				<div class="product-text tres bord">
+					<h5>Shirts</h5>
+					<h6>4 products</h6>
+				</div>
+				<div class="product-text cuatro">
+					<h5>Sweatshirts</h5>
+					<h6>4 products</h6>
+				</div>
+			</div>
+			<div class="images-products">
+				
+				<div class="product">
+					<div >
+						<i class='bx bx-plus'></i>
+						<img class="product-image" src="./assets/images/featured1.png" alt="Hoodies">
+					</div>
+					<div class="text">
+						<h4>$14.00</h4> <h6>Stock: 1</h6>
+						<h5>Hoodies</h5>
+					</div>
+				</div>
+				<div class="product">
+					<div >
+						<i class='bx bx-plus'></i>
+						<img class="product-image" src="./assets/images/featured2.png" alt="Shirts">
+					</div>
+					<div class="text">
+						<h4>$24.00</h4> <h6>Stock: 10</h6>
+						<h5>Shirts</h5>
+					</div>
+				</div>
+				<div class="product">
+					<div >
+						<i class='bx bx-plus'></i>
+						<img class="product-image" src="./assets/images/featured3.png" alt="Sweatshirts">
+					</div>
+					<div class="text">
+						<h4>$24.00</h4> <h6>Stock: 18</h6>
+						<h5>Sweatshirts</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<script src="assets/js/main.js"></script>
 </body>
+
 </html>

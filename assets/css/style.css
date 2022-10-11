@@ -19,6 +19,7 @@
   --body-color: hsl(206, 4%, 97%);
   --container-color: #fff;
   --border-color: hsl(0, 0%, 94%);
+  --title-texxt-color: black;
 
   /*========== Font and typography ==========*/
   --body-font: 'Roboto', sans-serif;
@@ -47,6 +48,9 @@ body {
   font-family: var(--body-font);
 }
 
+/* ============ DARK THEME ============ */
+
+
 /* ========== CLASS FOR DARK-THEME ========== */
 
 body.dark-theme {
@@ -57,8 +61,46 @@ body.dark-theme {
   --title-color: hsl(0, 0%, 95%);
   --text-color: hsl(0, 0%, 75%);
   --body-color: hsl(249, 19%, 14%);
-  --container-color: hsl(246, 16%, 12%);
+  --container-color: #fff /* hsl(246, 16%, 12%)*/;
   --border-color: hsl(0, 0%, 20%);
+  --title-texxt-color: white;
+}
+
+/* ========= ANIMACIÓN DE CARGA INICIAL ====== */
+.loader{
+  background-color: var(--body-color);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loader.hide{
+  display: none;
+}
+
+.loader-img{
+  width: 100px;
+  fill: var(--first-color);
+  position: relative;
+  animation: load 2s infinite;
+}
+
+@keyframes load{
+  0%{
+    top: 0;
+  }
+  50%{
+    top: -30px;
+  }
+  100%{
+    top: 0;
+  }
 }
 
 /* ========== NAVBAR ========== */
@@ -67,6 +109,7 @@ body.dark-theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--title-texxt-color);
 }
 
 .navbar-icons i{
@@ -87,11 +130,38 @@ body.dark-theme {
   fill: var(--first-color);
 }
 
+/*ERROR: LA PARTE SUPERIOR CONSERVA EL FONDO
+NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
+.nav-menu{
+  background-color: white;
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: none;
+}
+
+.nav-menu.visibility{
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  list-style: none;
+}
+
+.home-text{
+  padding-bottom: 1rem;
+  color: var(--first-color);
+}
+
 /* ========== FEATURE PRODUCT ========== */
 
 /* =====IMG PRODUCT ===== */
 .container--img-product {
   width: 70vw;
+  max-width: 250px;
   height: 60vh;
   position: absolute;
   z-index: -10;
@@ -123,24 +193,105 @@ body.dark-theme {
 
 .feature--product__price {
   color: var(--first-color);
+  margin-bottom: 0.5rem;
 }
 
 /* =====BUTTONS PRODUCT ===== */
-.feature--product__buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+.feature--product-buttons {
+  padding-bottom: 3rem;
+  border: none;
 }
  /* error no se juntan ambos iconos
   pendiente de revisar
+
+  SOLUCIONADO - PENDIENTE POR ACEPTACIÓN DEL GRUPO
+  SE RESTÓ EL MARGEN QUE HABÍA ENTRE AMBOS
  */
 .button--discover {
   background-color: var(--text-color-light);
   padding: .5rem 1rem;
+  font-weight: bold;
 }
 
 .button--add-to-cart {
   background-color: var(--button-color);
   color: var(--container-color);
   padding: 1rem;
+  margin-left: -.5rem;
+}
+
+/* ========= SHOW PRODUCTS ========== */
+
+/* TEXT */
+.stocks-products{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas: 
+    "uno dos"
+    "tres cuatro" ;
+  padding-bottom: 3rem;
+}
+
+.product-text{
+  padding: .5rem;
+  text-align: center;
+}
+
+.uno{
+  grid-area: uno;
+}
+
+.dos{
+  grid-area: dos;
+}
+
+.tres{
+  grid-area: tres;
+}
+
+.cuatro{
+  grid-area: cuatro;
+}
+
+h5{
+  padding-bottom: .5rem;
+}
+
+/*".bord" PENDIENTE DE BORDES 
+IGUALES AL DISEÑO ORIGINAL*/
+.bord{
+  border-right: 1px solid grey;
+}
+
+/*IMAGES*/
+.product{
+  width: 11rem;
+  margin: auto;
+  padding: 10px 20px;
+}
+
+.product-image{
+  width: 100%;
+  background-color: var(--card-color);
+  padding: 6px;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+/*VERIFICAR TAMAÑO DE LETRA*/
+.text{
+  background-color: var(--container-color);
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  padding-left: 10px;
+}
+
+.bx-plus{
+  position: absolute;
+  background-color: #fff;
+  margin: 124px 105px;
+  border-radius: 50%;
+  padding: 0.25rem;
+  box-shadow: 1px 1px 7px grey;
 }
