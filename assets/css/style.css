@@ -327,8 +327,8 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
 }
 
 .product-text{
-  padding: .5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .uno{
@@ -415,6 +415,5 @@ IGUALES AL DISEÑO ORIGINAL*/
 /* BACKGROUND-COLOR PARA SHOPING-BAG */
 .font-open-cart{
   z-index: 1;
-
-  background-color: rgba(192, 192, 192, 0.476);
+  background-color: rgba(32, 32, 32, 0.48);
 }

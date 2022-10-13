@@ -28,7 +28,12 @@ const items = [
   }
 ]
 
-// Evento DOMContentLoaded
+const [one, two, ...rest]= items 
+console.log(one);
+console.log(two);
+console.log(rest);
+
+  // Evento DOMContentLoaded
 
 
 const themeIcon = document.getElementById( "theme-btn" )
@@ -87,3 +92,10 @@ closeCart.addEventListener("click", e => {
   fontCartMenu.classList.remove("font-open-cart")
   cart.classList.remove("open-menu")
 })
+
+
+// show products 
+
+const showProducts = () => {
+  
+}
