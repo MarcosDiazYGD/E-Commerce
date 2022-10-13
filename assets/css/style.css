@@ -120,7 +120,12 @@ body.dark-theme {
 
 /* ========== NAVBAR ========== */
 
+
+/*LA BARRA DEBE CAMBIAR DE COLOR/OPACIDAD AL HACER SCROLL */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 0 1.25rem;
   display: flex;
   justify-content: space-between;
@@ -128,8 +133,32 @@ body.dark-theme {
   color: var(--title-texxt-color);
 }
 
+.nav--cart{
+  display: contents;
+}
+
+.counter{
+  background-color: var(--title-color);
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  padding: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--body-color);
+  font-size: 10px;
+  position: absolute;
+  bottom: 11px;
+  right: 54px;
+}
+
 .navbar-icons i {
   margin-left: 1rem;
+}
+
+.navbar-icons{
+  color:black;
 }
 
 .container-logo {
@@ -459,6 +488,12 @@ IGUALES AL DISEÑO ORIGINAL*/
   .navbar{
     margin-left: 50px;
     margin-right: 50px;
+    max-width: 90%;
+  }
+
+  .counter{
+    bottom: 11px;
+    right: 17px;
   }
 
   .text-menu{
