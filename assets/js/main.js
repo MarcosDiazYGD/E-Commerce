@@ -1,3 +1,5 @@
+//==========// IMPORTS \\==========\\
+
 // prices products 
 const items = [
   {
@@ -70,3 +72,18 @@ closeMenu.addEventListener("click", e => {
   menuSlider.classList.remove("open-menu")
 })
 
+// SHOPING BAG
+const closeCart = document.getElementById("close-cart")
+const fontCartMenu = document.getElementById("font-cart-menu")
+const cart = document.getElementById("cart")
+const bag = document.getElementById("bag-btn")
+
+bag.addEventListener("click", e => {
+  fontCartMenu.classList.add("font-open-cart")
+  cart.classList.add("open-menu")
+})
+
+closeCart.addEventListener("click", e => {
+  fontCartMenu.classList.remove("font-open-cart")
+  cart.classList.remove("open-menu")
+})
