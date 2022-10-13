@@ -68,6 +68,16 @@ document.addEventListener( "DOMContentLoaded", () =>{
   loadComponent()
 })
 
+//NAVBAR SCROLL
+const navbar = document.getElementById("navbar")
+window.addEventListener("scroll", () =>{
+  if(window.scrollY >= 50){
+    navbar.classList.add("scroll-navbar")
+  }else{
+    navbar.classList.remove("scroll-navbar")
+  }
+})
+
 
 //SLIDER MENU
 const menuBtn = document.getElementById("menu-btn")
