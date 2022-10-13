@@ -1,5 +1,17 @@
 //==========// IMPORTS \\==========\\
 
+
+
+
+
+
+//==========// VARS \\==========\\
+
+const cartItemsContainer = document.querySelector("section.content-cart")
+
+
+
+
 // prices products 
 const items = [
   {
@@ -28,14 +40,7 @@ const items = [
   }
 ]
 
-const [one, two, ...rest]= items 
-console.log(one);
-console.log(two);
-console.log(rest);
-
   // Evento DOMContentLoaded
-
-
 const themeIcon = document.getElementById( "theme-btn" )
 
 themeIcon.addEventListener("click", () =>{
@@ -82,8 +87,14 @@ const closeCart = document.getElementById("close-cart")
 const fontCartMenu = document.getElementById("font-cart-menu")
 const cart = document.getElementById("cart")
 const bag = document.getElementById("bag-btn")
+const cartCounter = document.getElementById("cart-counter")
 
 bag.addEventListener("click", e => {
+  fontCartMenu.classList.add("font-open-cart")
+  cart.classList.add("open-menu")
+})
+
+cartCounter.addEventListener("click", e => {
   fontCartMenu.classList.add("font-open-cart")
   cart.classList.add("open-menu")
 })
@@ -95,7 +106,41 @@ closeCart.addEventListener("click", e => {
 
 
 // show products 
+const addToCartButtons = document.querySelectorAll(".bx-plus")
 
-const showProducts = () => {
+addToCartButtons.forEach(addToCartButton => {
+  addToCartButton.addEventListener("click", addToCartClicked);
+})
+
+function addToCartClicked(e) {
+  const button = e.target
+  const item = button.closest(".product")
+  console.log(item);
+
+// product-images
+// product-name
+// price
+// stock
   
+  const productName = item.querySelector(".product-name").textContent;
+  const price = item.querySelector(".price").textContent;
+  const stock = item.querySelector(".stock").textContent;
+  const productImg = item.querySelector(".product-image").src;
+  console.log([productName]);
+  console.log([price]);
+  console.log([stock]);
+  console.log([productImg]);
+
+addItemToCart (productName, stock, price, productImg)
+
+
+
+}
+ 
+function addItemToCart ( productImg, productName, price, strock){
+  const itemContainer = dad.createElement("div")
+
+  const cartContent= ``
+  
+
 }

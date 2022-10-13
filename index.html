@@ -61,41 +61,47 @@
 					</g>
 				</svg>
 				<h2>STORE</h2>
+				<h2 class="text-menu home-menu">Home</h2>
+				<h2 class="text-menu">Products</h2>
 			</div>
-
+			
 			<!-- icons: moon - bag - menu -->
 			<div class="navbar-icons">
 				<i class='bx bx-moon' id="theme-btn"></i>
-				<i class='bx bx-shopping-bag' id="bag-btn"></i>
+				<div id="cart-shop" class="nav--cart">
+					<i class='bx bx-shopping-bag' id="bag-btn"></i>
+					<span id="cart-counter" class="counter">0</span>
+				</div>
 				<i class='bx bx-grid-alt' id="menu-btn"></i>
-      </div>
-      <div class="navbar--menu-slider" id="menu-slider">
-        <section class="buttons-slider">
-          <i class='bx bx-shopping-bag bx-xs'></i>
-          <i class='bx bx-x bx-sm' id="close-menu"></i>      
-        </section>
-        <section class="content-slider">
-            <a href="#">HOME</a>
-            <a href="#">PRODUCTS</a>
-          </ul>
-        </section>
-      </div>
+			</div>
+			<div class="navbar--menu-slider" id="menu-slider">
+				<section class="buttons-slider">
+					<i class='bx bx-shopping-bag bx-xs'></i>
+					<i class='bx bx-x bx-sm' id="close-menu"></i>
+				</section>
+				<section class="content-slider">
+					<a href="#" class="home">HOME</a>
+					<a href="#">PRODUCTS</a>
+					</ul>
+				</section>
+			</div>
 		</nav>
 
 		<!-- SHOPING BAG -->
 		<div class="container-slider-cart" id="font-cart-menu">
 			<div class="cart" id="cart">
-				
+
 				<section class="buttons-cart">
-					<i class='bx bx-x bx-sm' id="close-cart"></i>      
+					<i class='bx bx-x bx-sm' id="close-cart"></i>
 				</section>
 
 				<section class="content-cart">
 					<h2 class="title-cart">My Cart</h2>
 					<img src="assets/images/empty-cart.png">
-					
+
 					<h2 class="title-cart-empty">Your cart is empty</h2>
-					<p class="text-cart-empty">You can add items to your cart by clicking on the '+' button on the product page</p>
+					<p class="text-cart-empty">You can add items to your cart by clicking on the '+' button on the
+						product page</p>
 				</section>
 
 				<section class="description-cart">
@@ -115,7 +121,8 @@
 			</div>
 			<div class="feature--product__text">
 				<h1>New Sweatshirt <br>COLLECTIONS 2022</h1>
-				<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum aut alias incidunt excepturi eos corrupti!
+				<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum aut alias incidunt excepturi eos
+					corrupti!
 				</P>
 
 				<span class="feature--product__price">$14.00</span>
@@ -127,9 +134,9 @@
 
 			</div>
 		</div>
-		
+
 	</header>
-  <main>
+	<main>
 
 		<!-- SHOW PRODUCTS -->
 		<div class="all-product">
@@ -152,42 +159,85 @@
 				</div>
 			</div>
 			<div class="images-products">
-				
+
 				<div class="product">
 					<div >
 						<i class='bx bx-plus' id="product-1"></i>
 						<img class="product-image" src="./assets/images/featured1.png" alt="Hoodies">
 					</div>
 					<div class="text">
-						<h4>$14.00</h4> <h6>Stock: 1</h6>
-						<h5>Hoodies</h5>
+						<div class="stock-text">
+							<h4 class="price">$14.00</h4>
+							<h6 class="stock">Stock: 1</h6>
+						</div>
+						<h5 class="product-name">Hoodies</h5>
 					</div>
 				</div>
+				
 				<div class="product">
 					<div >
 						<i class='bx bx-plus' id="product-2"></i>
 						<img class="product-image" src="./assets/images/featured2.png" alt="Shirts">
 					</div>
 					<div class="text">
-						<h4>$24.00</h4> <h6>Stock: 10</h6>
-						<h5>Shirts</h5>
+						<div class="stock-text">
+							<h4 class="price">$24.00</h4>
+							<h6 class="stock">Stock: 10</h6>
+						</div>
+						<h5 class="product-name">Shirts</h5>
 					</div>
 				</div>
+				
 				<div class="product">
 					<div >
 						<i class='bx bx-plus' id="product-3"></i>
 						<img class="product-image" src="./assets/images/featured3.png" alt="Sweatshirts">
 					</div>
 					<div class="text">
-						<h4>$24.00</h4> <h6>Stock: 18</h6>
-						<h5>Sweatshirts</h5>
+						<div class="stock-text">
+							<h4 class="price">$24.00</h4>
+							<h6 class="stock">Stock: 18</h6>
+						</div>
+						<h5 class="product-name">Sweatshirts</h5>
 					</div>
 				</div>
 			</div>
 		</div>
 
-  </main>
+	</main>
 	<script src="assets/js/main.js" type="module"></script>
 </body>
+<footer>
+	<div class="footer-container">
+		<div class="footer-text uno">
+			<h5>Our information</h5>
+			<h6>Toluca - México</h6>
+		</div>
+		<div class="footer-text dos">
+			<h5>About Us</h5>
+			<h6>Support Center</h6>
+			<h6>Customer Support</h6>
+			<h6>About Us</h6>
+			<h6>Copy Right</h6>
+		</div>
+		<div class="footer-text tres">
+			<h5>Product</h5>
+			<h6>Hoodies</h6>
+			<h6>Shirts</h6>
+			<h6>Sweatshirts</h6>
+		</div>
+		<div class="footer-text cuatro">
+			<h5>Social</h5>
+			<div class="social-icon">
+				<i class='bx bxl-facebook'></i>
+				<i class='bx bxl-twitter'></i>
+				<i class='bx bxl-instagram'></i>
+			</div>
+		</div>
+		<h6 class="copyright">
+			<i class='bx bx-copyright'></i>ACADEMLO All rights reserved.
+		</h6>
+	</div>
+</footer>
 
 </html>
