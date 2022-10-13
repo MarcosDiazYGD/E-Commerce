@@ -4,6 +4,7 @@
 
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +47,6 @@
 /* ========== BODY STYLES ========== */
 
 body {
-  padding: 0 1.25rem;
   background-color: var(--body-color);
   color: var(--text-color);
   font-family: var(--body-font);
@@ -66,13 +66,15 @@ body.dark-theme {
   --title-color: hsl(0, 0%, 95%);
   --text-color: hsl(0, 0%, 75%);
   --body-color: hsl(249, 19%, 14%);
-  --container-color: #fff /* hsl(246, 16%, 12%)*/;
+  --container-color: #fff
+    /* hsl(246, 16%, 12%)*/
+  ;
   --border-color: hsl(0, 0%, 20%);
   --title-texxt-color: white;
 }
 
 /* ========= ANIMACIÓN DE CARGA INICIAL ====== */
-.loader{
+.loader {
   background-color: var(--body-color);
   width: 100%;
   height: 100%;
@@ -85,39 +87,48 @@ body.dark-theme {
   z-index: 100;
 }
 
-.loader.hide{
+.loader.hide {
   display: none;
 }
 
-.loader-img{
+.loader-img {
   width: 100px;
   fill: var(--first-color);
   position: relative;
   animation: load 3s infinite;
 }
 
-@keyframes load{
-  0%{
+@keyframes load {
+  0% {
     top: 0;
   }
-  50%{
+
+  50% {
     top: -30px;
   }
-  100%{
+
+  100% {
     top: 0;
   }
+}
+
+/* =========NAVMENU ==========*/
+
+.text-menu{
+  display: none;
 }
 
 /* ========== NAVBAR ========== */
 
 .navbar {
+  padding: 0 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--title-texxt-color);
 }
 
-.navbar-icons i{
+.navbar-icons i {
   margin-left: 1rem;
 }
 
@@ -130,7 +141,7 @@ body.dark-theme {
   font-size: 15px;
 }
 
-.academlo-logo{
+.academlo-logo {
   width: 40px;
   fill: var(--first-color);
 }
@@ -157,7 +168,7 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
   display: flex;
   justify-content: end;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
 }
 
 .content-slider {
@@ -168,6 +179,10 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
   gap: 1rem;
   width: 100%;
   height: 95%;
+}
+
+.home {
+  color: var(--first-color);
 }
 
 .content-slider a {
@@ -190,7 +205,7 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
 }
 
 /* ===== CART ===== */
-.cart{
+.cart {
   position: fixed;
   width: 100%;
   max-width: 400px;
@@ -216,15 +231,15 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
 }
 
 /* ===== CONTENT CART ===== */
-.content-cart{
+.content-cart {
   text-align: center;
-  width:100%;
+  width: 100%;
   height: 65%;
   max-height: 500px;
 }
 
 .content-cart img {
-  width:100%;
+  width: 100%;
 }
 
 /* ===== ITEMS Y PRICE ===== */
@@ -242,13 +257,13 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
   justify-content: end;
 }
 
-.buy-cart > button {
+.buy-cart>button {
   display: block;
   border: none;
   background-color: var(--border-color);
   padding: 1.25rem 2.5rem;
 }
-  
+
 /* ========== FEATURE PRODUCT ========== */
 
 /* =====IMG PRODUCT ===== */
@@ -269,6 +284,10 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
 }
 
 /* =====TEXT PRODUCT ===== */
+.feature--product {
+  padding: 0 1.25rem;
+}
+
 .feature--product__text {
   margin-top: 60vh;
   display: flex;
@@ -276,13 +295,13 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
   gap: 1rem;
 }
 
-.feature--product__text h1{
+.feature--product__text h1 {
   color: var(--title-color);
-}  
+}
 
-.feature--product__text p{
+.feature--product__text p {
   color: var(--text-color);
-} 
+}
 
 .feature--product__price {
   color: var(--first-color);
@@ -294,7 +313,8 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
   padding-bottom: 3rem;
   border: none;
 }
- /* error no se juntan ambos iconos
+
+/* error no se juntan ambos iconos
   pendiente de revisar
 
   SOLUCIONADO - PENDIENTE POR ACEPTACIÓN DEL GRUPO
@@ -310,61 +330,66 @@ NO SE PONE TODO DE BLANCO COMO EL ESTILO BASE */
   background-color: var(--button-color);
   color: var(--container-color);
   padding: 1rem;
-  margin-left: -.2rem;
+  margin-left: -.4rem;
 }
 
 /* ========= SHOW PRODUCTS ========== */
 
 /* TEXT */
-.stocks-products{
+.stocks-products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "uno dos"
-    "tres cuatro" ;
+    "tres cuatro";
   padding-bottom: 3rem;
 }
 
-.product-text{
+.product-text {
   padding: .5rem;
   text-align: center;
+  margin: 1rem;
 }
 
-.uno{
+.uno {
   grid-area: uno;
 }
 
-.dos{
+.dos {
   grid-area: dos;
 }
 
-.tres{
+.tres {
   grid-area: tres;
 }
 
-.cuatro{
+.cuatro {
   grid-area: cuatro;
 }
 
-h5{
+h5 {
   padding-bottom: .5rem;
 }
 
 /*".bord" PENDIENTE DE BORDES 
 IGUALES AL DISEÑO ORIGINAL*/
-.bord{
+.bord {
   border-right: 1px solid grey;
 }
 
+.images-products {
+  padding-bottom: 3rem;
+}
+
 /*IMAGES*/
-.product{
+.product {
   width: 11rem;
   margin: auto;
   padding: 10px 20px;
 }
 
-.product-image{
+.product-image {
   width: 100%;
   background-color: var(--card-color);
   padding: 6px;
@@ -373,14 +398,28 @@ IGUALES AL DISEÑO ORIGINAL*/
 }
 
 /*VERIFICAR TAMAÑO DE LETRA*/
-.text{
+.text {
   background-color: var(--container-color);
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;
   padding-left: 10px;
+  color: var(--button-color);
 }
 
-.bx-plus{
+.stock-text {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+  margin: -3px;
+}
+
+.stock-text>h6 {
+  border-left: 1px solid grey;
+  margin-left: 5px;
+  padding-left: 2px;
+}
+
+.bx-plus {
   position: absolute;
   background-color: #fff;
   margin: 124px 105px;
@@ -389,10 +428,110 @@ IGUALES AL DISEÑO ORIGINAL*/
   box-shadow: 1px 1px 7px grey;
 }
 
+.footer-container {
+  background-color: var(--card-color);
+  padding-top: 3rem;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--title-color);
+}
+
+.footer-text {
+  padding: 1rem 2rem;
+}
 
 
+.copyright {
+  padding: 2rem 25% 1rem;
+  margin: auto;
+}
 
 
+/*Maquetado desde laptops en adelante*/
+@media screen and (min-width: 992px) {
+  .bx-grid-alt {
+    display: none;
+  }
+
+  .navbar{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .text-menu{
+    display: flex;
+    padding-left: 3rem;
+  }
+
+  .home-menu{
+    color: var(--first-color);
+  }
+
+  
+
+  .feature--product{
+    margin-top: -17rem;
+    max-width: 500px;
+    margin-left: 50px;
+  }
+
+  .container--img-product{
+    max-width: 40%;
+    height: 500px;
+    margin-right: 50px;
+  }
+
+  .img-product{
+    width: 400px;
+    margin-left:6%;
+  }
+
+  .stocks-products{
+    grid-template-areas: "uno dos tres cuatro";
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 130px;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .images-products{
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .product{
+    width: 17rem;
+  }
+
+  .text{
+    font-size: 20px;
+  }
+
+  .bx-plus{
+    margin: 215px 186px;
+    padding: 0.5rem;
+  }
+
+  .product-image{
+    padding: 20px;
+  }
+
+  .footer-container{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 1rem 2rem 1rem;
+    font-size: 20px;
+  }
+
+  .copyright{
+    display: none;
+  }
+}
 
 
 
@@ -408,12 +547,12 @@ IGUALES AL DISEÑO ORIGINAL*/
 
 
 /* CLASES PARA USAR CON JS (SIEMPRE DEJARLAS DE ULTIMAS) */
-.open-menu{
+.open-menu {
   right: 0%;
 }
 
 /* BACKGROUND-COLOR PARA SHOPING-BAG */
-.font-open-cart{
+.font-open-cart {
   z-index: 1;
 
   background-color: rgba(192, 192, 192, 0.476);
