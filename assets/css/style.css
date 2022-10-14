@@ -124,6 +124,7 @@ body.dark-theme {
 /*LA BARRA DEBE CAMBIAR DE COLOR/OPACIDAD AL HACER SCROLL */
 .navbar {
   position: fixed;
+  background-color: transparent;
   top: 0;
   width: 100%;
   padding: 0 1.25rem;
@@ -132,6 +133,13 @@ body.dark-theme {
   align-items: center;
   color: var(--title-texxt-color);
 }
+
+.navbar.scroll-navbar{
+  background-color: var(--body-color);
+  transition: 0.5s;
+  z-index: 5;
+}
+
 
 .nav--cart{
   display: contents;
@@ -153,13 +161,27 @@ body.dark-theme {
   right: 54px;
 }
 
+.counter-slider{
+  background-color: var(--title-color);
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  padding: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--body-color);
+  font-size: 10px;
+  position: absolute;
+  right: 54px;
+  top: 1.5rem;
+}
+
 .navbar-icons i {
   margin-left: 1rem;
 }
 
-.navbar-icons{
-  color:black;
-}
+
 
 .container-logo {
   display: flex;
@@ -583,7 +605,7 @@ h5 {
   .container--img-product{
     max-width: 40%;
     height: 500px;
-    margin-right: 50px;
+    margin-right: 65px;
   }
 
   .img-product{

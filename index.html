@@ -43,10 +43,10 @@
 		</svg>
 		-->
 	</div>
-	<header>
+	<header class="header" id="header">
 		<title></title>
 		<!-- NAVBAR -->
-		<nav class="navbar">
+		<nav class="navbar" id="navbar">
 
 			<!-- ACADEMLO LOGO -->
 			<div class="container-logo">
@@ -64,7 +64,7 @@
 				<h2 class="text-menu home-menu">Home</h2>
 				<h2 class="text-menu">Products</h2>
 			</div>
-			
+
 			<!-- icons: moon - bag - menu -->
 			<div class="navbar-icons">
 				<i class='bx bx-moon' id="theme-btn"></i>
@@ -76,7 +76,10 @@
 			</div>
 			<div class="navbar--menu-slider" id="menu-slider">
 				<section class="buttons-slider">
-					<i class='bx bx-shopping-bag bx-xs'></i>
+					<div>
+						<i class='bx bx-shopping-bag bx-xs' id="bag-btn-menu"></i>
+						<span id="cart-counter-menu" class="counter-slider">0</span>
+					</div>
 					<i class='bx bx-x bx-sm' id="close-menu"></i>
 				</section>
 				<section class="content-slider">
@@ -163,7 +166,7 @@
 			<div class="images-products">
 
 				<div class="product">
-					<div class="product-image-main">
+					<divclass="product-image-main">
 						<i class='bx bx-plus' id="product-1"></i>
 						<img class="product-image" src="./assets/images/featured1.png" alt="Hoodies">
 					</div>
@@ -175,9 +178,9 @@
 						<h5 class="product-name">Hoodies</h5>
 					</div>
 				</div>
-				
+
 				<div class="product">
-					<div class="product-image-main">
+					<div >
 						<i class='bx bx-plus' id="product-2"></i>
 						<img class="product-image" src="./assets/images/featured2.png" alt="Shirts">
 					</div>
@@ -189,9 +192,9 @@
 						<h5 class="product-name">Shirts</h5>
 					</div>
 				</div>
-				
+
 				<div class="product">
-					<div class="product-image-main">
+					<div >
 						<i class='bx bx-plus' id="product-3"></i>
 						<img class="product-image" src="./assets/images/featured3.png" alt="Sweatshirts">
 					</div>
@@ -240,6 +243,7 @@
 			<i class='bx bx-copyright'></i>ACADEMLO All rights reserved.
 		</h6>
 	</div>
+
 </footer>
 
 </html>
