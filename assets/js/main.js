@@ -107,7 +107,7 @@ closeCart.addEventListener("click", e => {
 
 // show products 
 const addToCartButtons = document.querySelectorAll(".bx-plus")
-
+const shopingCartContainer = document.querySelector("content-cart")
 addToCartButtons.forEach(addToCartButton => {
   addToCartButton.addEventListener("click", addToCartClicked);
 })
@@ -122,25 +122,38 @@ function addToCartClicked(e) {
 // price
 // stock
   
-  const productName = item.querySelector(".product-name").textContent;
-  const price = item.querySelector(".price").textContent;
-  const stock = item.querySelector(".stock").textContent;
   const productImg = item.querySelector(".product-image").src;
-  console.log([productName]);
-  console.log([price]);
-  console.log([stock]);
-  console.log([productImg]);
+  const productName = item.querySelector(".product-name").textContent;
+  const stock = item.querySelector(".stock").textContent;
+  const price = item.querySelector(".price").textContent;
 
-addItemToCart (productName, stock, price, productImg)
+addItemToCart(productImg, productName, stock, price)
 
 
 
 }
  
-function addItemToCart ( productImg, productName, price, strock){
-  const itemContainer = dad.createElement("div")
+function addItemToCart ( productImg, productName, stock, price){
+  const itemContainer = document.createElement("div")
+  const cartContent= `
+  <div class="cart-product">
 
-  const cartContent= ``
-  
+    <div class="product-img bx-border">
+      <img src="${productImg}">
+    </div>
+    <div class="product-details">
+      <h3 class="title-product">${productName}</h3>
+      <p class="first">Stock <span class="stock-value">${stock}</span><span class="price-value">$${price}</span></p>
+      <p class="second">Subtotal<span class="subtotal-value">$${price}</span></p>
+      <div class="details">
+        <i class="bx bx-minus bx-border"></i>
+        <span class="item-amunt">1</span>
+        <i class="bx bx-plus bx-border"></i>
+        <i class="bx bx-trash"></i>
+      </div>
+    </div>
+  </div>`
+  itemContainer.innerHTML = cartContent
 
-}
+
+} 
