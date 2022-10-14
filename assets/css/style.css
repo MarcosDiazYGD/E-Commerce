@@ -137,6 +137,7 @@ body.dark-theme {
 .navbar.scroll-navbar{
   background-color: var(--body-color);
   transition: 0.5s;
+  z-index: 5;
 }
 
 
@@ -158,6 +159,22 @@ body.dark-theme {
   position: absolute;
   bottom: 11px;
   right: 54px;
+}
+
+.counter-slider{
+  background-color: var(--title-color);
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  padding: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--body-color);
+  font-size: 10px;
+  position: absolute;
+  right: 54px;
+  top: 1.5rem;
 }
 
 .navbar-icons i {
