@@ -97,7 +97,14 @@ const closeCart = document.getElementById("close-cart")
 const fontCartMenu = document.getElementById("font-cart-menu")
 const cart = document.getElementById("cart")
 const bag = document.getElementById("bag-btn")
+const bagMenu = document.getElementById("bag-btn-menu")
 const cartCounter = document.getElementById("cart-counter")
+const cartCounterMenu = document.getElementById("cart-counter-menu")
+
+bagMenu.addEventListener("click", e => {
+  fontCartMenu.classList.add("font-open-cart")
+  cart.classList.add("open-menu")
+})
 
 bag.addEventListener("click", e => {
   fontCartMenu.classList.add("font-open-cart")
@@ -105,6 +112,11 @@ bag.addEventListener("click", e => {
 })
 
 cartCounter.addEventListener("click", e => {
+  fontCartMenu.classList.add("font-open-cart")
+  cart.classList.add("open-menu")
+})
+
+cartCounterMenu.addEventListener("click", e => {
   fontCartMenu.classList.add("font-open-cart")
   cart.classList.add("open-menu")
 })
